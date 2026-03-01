@@ -4,13 +4,13 @@ import { store } from '../../store';
 import { Login } from '../../components';
 
 describe('Login component', () => {
-  it('renders login and logout buttons', () => {
+  it('renders authentication buttons', () => {
     render(
       <Provider store={store}>
         <Login />
       </Provider>
     );
-    expect(screen.getByText(/login/i)).toBeInTheDocument();
-    expect(screen.getByText(/log out/i)).toBeInTheDocument();
+    expect(screen.getByText(/sign in/i)).toBeInTheDocument();
+    expect(screen.getByText(/sign out/i)).toBeInTheDocument();
   });
 });

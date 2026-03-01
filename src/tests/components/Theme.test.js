@@ -4,13 +4,13 @@ import { store } from '../../store';
 import { Theme } from '../../components';
 
 describe('Theme component', () => {
-  it('renders input and update button', () => {
+  it('renders customization UI', () => {
     render(
       <Provider store={store}>
         <Theme />
       </Provider>
     );
     expect(screen.getByRole('textbox')).toBeInTheDocument();
-    expect(screen.getByText(/update/i)).toBeInTheDocument();
+    expect(screen.getByText(/apply color/i)).toBeInTheDocument();
   });
 });
